@@ -5,6 +5,8 @@ let checkup;
 const button = document.getElementById("add_btn");
 const btn_stage_area = document.getElementById("to_stage_area");
 const btn_plan_area = document.getElementById("to_plan_area");
+const btn_to_finish = document.getElementById("to_finish_area");
+const btn_back_to_stage_area = document.getElementById("back_to_stage_area");
 button.addEventListener("click", (event) => {
   // const jobs = prompt("enter your info");
   const checkbox = document.createElement("input");
@@ -71,6 +73,26 @@ btn_plan_area.addEventListener("click", () => {
   const inside = stage23.getAttribute("id");
   console.log(inside);
   job_container.append(stage2);
+});
+btn_to_finish.addEventListener("click", () => {
+  console.log("to go back plan area pressed");
+  const job_container = document.getElementById("finished");
+  const stage23 = document.getElementById("stage2");
+  const stage2 = document.getElementById(checkup);
+  const move = document.getElementById("stage2");
+  const inside = stage23.getAttribute("id");
+  console.log(inside);
+  job_container.append(stage2);
+});
+btn_back_to_stage_area.addEventListener("click", () => {
+  console.log("to go back plan area pressed");
+  const job_container = document.getElementById("finished");
+  const stage23 = document.getElementById("stage2");
+  const stage2 = document.getElementById(checkup);
+  const move = document.getElementById("stage2");
+  const inside = stage23.getAttribute("id");
+  console.log(inside);
+  stage23.append(stage2);
 });
 
 // nita part
