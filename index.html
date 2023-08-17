@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="syle.css" />
+
     <title>ToDo-List</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -22,10 +22,10 @@
             <h3>Todo</h3>
             <div class="todoinprogessfinished">
               <div class="todo_job_container">
-                <div class="jobs1">
+                <div class="jobs1" id="boxi">
                   <h4>add job to the plan</h4>
-                  <input type="text" name="" id="" />
-                  <button>Add</button>
+                  <input id="txt" type="text" name="" />
+                  <button id="add_btn">Add</button>
                 </div>
                 <div class="jobs2">
                   <input type="radio" />
@@ -42,10 +42,10 @@
                 class="direction_btn_1st_stage_2nd_stage_maincontainer"
               ></div>
               <div class="direction_btn_1st_stage_2nd_stage">
-                <button>"-->"</button>
-                <button>"<--"</button>
+                <button id="to_stage_area">"-->"</button>
+                <button id="to_plan_area">"<--"</button>
               </div>
-              <div class="todo_in_progress">
+              <div class="todo_in_progress" id="stage2">
                 <div class="jobs_in_progess_1">
                   <h4>In todo_in_progress</h4>
                   <input type="text" name="" id="" />
@@ -66,10 +66,10 @@
                 class="direction_btn_1st_stage_2nd_stage_maincontainer"
               ></div>
               <div class="direction_btn_1st_stage_2nd_stage">
-                <button>"-->"</button>
-                <button>"<--"</button>
+                <button id="to_finish_area">"-->"</button>
+                <button id="back_to_stage_area">"<--"</button>
               </div>
-              <div class="todo_finished">
+              <div class="todo_finished" id="finished">
                 <div class="jobs_in_finished_1">
                   <h4>Finished Jobs</h4>
                   <input type="text" name="" id="" />
