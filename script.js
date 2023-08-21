@@ -29,7 +29,7 @@ button.addEventListener("click", (event) => {
   textfield.setAttribute("readonly", "True");
   btn.innerText = "x";
   checkbox.setAttribute("type", "radio");
-  box.style.backgroundColor = "orange";
+  // box.style.backgroundColor = "orange";
   let div_info = `box ${counter}`;
   console.log("this is the div info ", div_info);
   //box.classList.add(div_info);
