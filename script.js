@@ -96,6 +96,7 @@ btn_back_to_stage_area.addEventListener("click", () => {
 });
 
 // nita part
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   const taskText = document.querySelector(".task-text");
 //   const editButton = document.querySelector(".edit-button");
