@@ -7,8 +7,10 @@ const btn_stage_area = document.getElementById("to_stage_area");
 const btn_plan_area = document.getElementById("to_plan_area");
 const btn_to_finish = document.getElementById("to_finish_area");
 const btn_back_to_stage_area = document.getElementById("back_to_stage_area");
+let count = 0;
 button.addEventListener("click", (event) => {
   // const jobs = prompt("enter your info");
+  const editbtn = document.createElement("button");
   const checkbox = document.createElement("input");
 
   const box = document.createElement("div");
@@ -26,8 +28,9 @@ button.addEventListener("click", (event) => {
   //box.innerHTML = "div <br> 5";
   textfield.setAttribute("type", "textfield");
   textfield.setAttribute("value", get_txt);
-  textfield.setAttribute("readonly", "True");
+  textfield.disabled = true;
   btn.innerText = "x";
+  editbtn.innerText = "E";
   checkbox.setAttribute("type", "radio");
   // box.style.backgroundColor = "orange";
   let div_info = `box ${counter}`;
@@ -37,11 +40,34 @@ button.addEventListener("click", (event) => {
   //box.setAttribute("id", div_info);
   box.setAttribute("id", div_info);
   box.appendChild(checkbox);
+  box.appendChild(editbtn);
   box.appendChild(textfield);
   box.appendChild(btn);
   console.log(box.classList);
   job_container.appendChild(box);
   console.log(counter);
+  editbtn.addEventListener("click", () => {
+    if (count === 0) {
+      editbtn.innerText = "un";
+      textfield.disabled = false;
+      count = count + 1;
+      console.log("this the value of count must be 1", count);
+    } else if (count === 1) {
+      console.log("this the value of count must be 0", count);
+      count = count - 1;
+      textfield.disabled = true;
+      editbtn.innerText = "E";
+    }
+  });
+
+  editbtn.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13 || event.key === "Enter") {
+      console.log("Enter key was pressed");
+      textfield.disabled = true;
+      // 4. Perform the desired action.
+      // Add your code here to handle the Enter key press event
+    }
+  });
   btn.addEventListener("click", () => {
     job_container.removeChild(box);
   });
