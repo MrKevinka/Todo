@@ -96,7 +96,40 @@ btn_back_to_stage_area.addEventListener("click", () => {
 });
 
 // nita part
+// document.addEventListener("DOMContentLoaded", function () {
+//   const taskText = document.querySelector(".task-text");
+//   const editButton = document.querySelector(".edit-button");
 
+//   editButton.addEventListener("click", function () {
+//     const currentText = taskText.textContent;
+//     const newText = prompt("Edit the task:", currentText);
+//     e.target.parentElement.edit();
+//     if (newText !== null && newText !== "") {
+//       taskText.textContent = newText;
+//     }
+//   });
+// });
 // vaishali part
+// listContainer.addEventListener("click", function(e)){
+//   if(e.target.tagName==="LI"){
+//       e.target.classList.toggle("checked");
+//       saveData();
+//   }
+//   else if(e.target.tagName==="SPAN")
+//   {
+//       e.target.parentElement.remove();
+//       saveData();
+//   }}
 
+//   document.addEventListener('DOMContentLoaded', function() ){
+//     const taskText = document.querySelector('.task-text');
+//     const editButton = document.querySelector('.edit-button');
+//     const editInput = document.querySelector('.edit-input');}
+
+//     editButton.addEventListener('click', function() ){
+//         taskText.style.display = 'none';
+//         editButton.style.display = 'none';
+//         editInput.style.display = 'block';
+//         editInput.value = taskText.textContent;
+//         editInput.focus()};
 // kevin part
