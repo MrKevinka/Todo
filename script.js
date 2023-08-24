@@ -9,6 +9,8 @@ const btn_to_finish = document.getElementById("to_finish_area");
 const btn_back_to_stage_area = document.getElementById("back_to_stage_area");
 const save_work = document.getElementById("save_work");
 let count = 0;
+let div_info;
+
 button.addEventListener("click", (event) => {
   // const jobs = prompt("enter your info");
   const editbtn = document.createElement("button");
@@ -29,16 +31,19 @@ button.addEventListener("click", (event) => {
   //box.innerHTML = "div <br> 5";
   textfield.setAttribute("type", "textfield");
   textfield.setAttribute("value", get_txt);
+
   textfield.disabled = true;
   btn.innerText = "x";
   editbtn.innerText = "E";
   checkbox.setAttribute("type", "radio");
   // box.style.backgroundColor = "orange";
-  let div_info = `box ${counter}`;
+  div_info = `box ${counter}`;
   console.log("this is the div info ", div_info);
   //box.classList.add(div_info);
   //box.setAttribute("class", div_info);
   //box.setAttribute("id", div_info);
+  localStorage.setItem(div_info, get_txt);
+  console.log("this value is ", localStorage.getItem(textfield));
   box.setAttribute("id", div_info);
   box.appendChild(checkbox);
   box.appendChild(editbtn);
@@ -48,7 +53,8 @@ button.addEventListener("click", (event) => {
   job_container.appendChild(box);
   console.log(counter);
   add_txt.value = "";
-  //save_work.addEventListener("click",(e)=>{
+  localStorage.getItem(div_info);
+
   // if
   //})
   editbtn.addEventListener("click", () => {
@@ -125,8 +131,18 @@ btn_back_to_stage_area.addEventListener("click", () => {
   console.log(inside);
   stage23.append(stage2);
 });
+save_work.addEventListener("click", SaveProfile);
+function SaveProfile() {
+  for (let a = 0; a <= counter; a++) {
+    localStorage.getItem(div_info.textfield);
+    console.log(
+      "your work has been save",
+      localStorage.getItem(div_info.textfield)
+    );
+  }
 
-// nita part
+  // nita part
+}
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   const taskText = document.querySelector(".task-text");
