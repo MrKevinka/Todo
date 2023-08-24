@@ -7,6 +7,7 @@ const btn_stage_area = document.getElementById("to_stage_area");
 const btn_plan_area = document.getElementById("to_plan_area");
 const btn_to_finish = document.getElementById("to_finish_area");
 const btn_back_to_stage_area = document.getElementById("back_to_stage_area");
+const save_work = document.getElementById("save_work");
 let count = 0;
 button.addEventListener("click", (event) => {
   // const jobs = prompt("enter your info");
@@ -46,6 +47,10 @@ button.addEventListener("click", (event) => {
   console.log(box.classList);
   job_container.appendChild(box);
   console.log(counter);
+  add_txt.value = "";
+  //save_work.addEventListener("click",(e)=>{
+  // if
+  //})
   editbtn.addEventListener("click", () => {
     if (count === 0) {
       editbtn.innerText = "un";
