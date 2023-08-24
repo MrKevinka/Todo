@@ -43,13 +43,26 @@ h3 {
 .todo_finished {
   display: flex;
   flex-direction: column;
-
+  overflow: auto;
   text-align: center;
   height: 400px;
 
   padding: 1.5rem;
   border: 4px solid rgb(194, 132, 153);
   border-radius: 10%;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 .todo_in_progress .jobs2 #text_1 .jobs2 #jobs2_x,
 #text_2,
@@ -63,21 +76,21 @@ h3 {
 
 /* nita part  */
 .task {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
 }
 
 .task-text {
-    margin: 0;
+  margin: 0;
 }
 
 .edit-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 /* vaishali aprt  */
 
